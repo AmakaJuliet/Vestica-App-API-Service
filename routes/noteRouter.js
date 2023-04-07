@@ -4,7 +4,7 @@ const verifyAuth = require("../middlewares/auth.middleware");
 const noteRouter = require("express").Router();
 
 noteRouter.post("/create", verifyAuth, createNote);
-noteRouter.get("/post/:id", fetchNote);
+noteRouter.get("/note/:id", fetchNote);
 noteRouter.get("/all", fetchNotes);
 noteRouter.post("/delete/:id", verifyAuth, deleteNote);
 
