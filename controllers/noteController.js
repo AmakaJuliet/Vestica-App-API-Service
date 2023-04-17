@@ -65,7 +65,7 @@ async function fetchNote(req, res, next) {
     const { id } = req.params;
     try {
         
-        const note = await noteModel.findOne({ _id: id }).populate("author", "email").exec();
+        const note = await noteModel.findOne({ _id: id }).populate("author", "-password -timestamps -createdat -updatedat").exec();
         if (!note) {
             return res.json({
                 success: false,

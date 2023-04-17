@@ -39,8 +39,8 @@ app.get(`/${api_version}`, (req, res, next) => {
 });
 
 app.use(`/${api_version}/auth`, authRouter);
-app.use(`/${api_version}/user`, userRouter);
-app.use(`/${api_version}/note`, noteRouter);
+app.use(`/${api_version}/users`, userRouter);
+app.use(`/${api_version}/notes`, noteRouter);
 
 
 

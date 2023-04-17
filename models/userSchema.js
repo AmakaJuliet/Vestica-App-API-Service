@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema(
         user_type: {
             type: String,
             enum: ["USER", "GUEST_AUTHOR", "AUTHOR"],
-            require: true,
+            required: true,
         },
     },
     { timestamps: true }

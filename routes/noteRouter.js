@@ -4,7 +4,7 @@ const verifyAuth = require("../middlewares/auth.middleware");
 
 
 noteRouter.post("/create", verifyAuth, createNote);
-noteRouter.get("/note/:id", fetchNote);
+noteRouter.get("/:id", fetchNote);
 noteRouter.get("/all", fetchNotes);
 noteRouter.post("/delete/:id", verifyAuth, deleteNote);
 
